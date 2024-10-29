@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>予約システム</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>予約システム</h1>
+<!-- 予約状態の表示 -->
+<p id="reservation-status">(予約受付中)</p>
+<!-- 予約ボタン -->
+<button id="reserve-button" onclick="reserve()">予約する</button>
+<script>
+       // 予約処理関数
+       function reserve() {
+           // 予約状態を「予約済み」に変更
+           document.getElementById("reservation-status").textContent = "(予約済み)";
+           // ボタンを非表示にしてメッセージを表示
+           const button = document.getElementById("reserve-button");
+           button.style.display = "none";
+           // メッセージの表示
+           const thankYouMessage = document.createElement("p");
+           thankYouMessage.textContent = "ありがとうございました";
+           document.body.appendChild(thankYouMessage);
+       }
+</script>
+</body>
+</html>
