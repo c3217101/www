@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掛け算計算</title>
+    <style>
+        /* CSSでボタンや出力結果のデザインを指定してください */
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+ </style>
+ </head>
+ <body>
+ <!-- 計算ボタン -->
+ <button onclick="multiply(0)">計算 1</button>
+ <button onclick="multiply(1)">計算 2</button>
+ <button onclick="multiply(2)">計算 3</button>
+ <script>
+        // 配列aとbの定義
+        const a = [500, 980, 1200];
+        const b = [10, 16, 8];
+        // 汎用関数multiplyの定義
+        function multiply(i) {
+            // 計算結果を変数answerに代入
+            const answer = a[i] * b[i];
+            // 計算結果をアラートで表示
+            alert("計算結果: " + answer);
+        }
+ </script>
+
+ </body>
+<style/>
+ body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+ }
+ button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+ }
+ 
+ 
+
+ </html>
+ 
+
+    
+
