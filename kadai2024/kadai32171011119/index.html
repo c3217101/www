@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クリック回数で分岐</title>
+<style>
+       body {
+           font-family: Arial, sans-serif;
+           text-align: center;
+           margin-top: 50px;
+       }
+       button {
+           padding: 10px 20px;
+           font-size: 16px;
+           cursor: pointer;
+       }
+       .message {
+           margin-top: 20px;
+           font-size: 18px;
+           color: #333;
+       }
+</style>
+</head>
+<body>
+<h1>クリック回数で処理を分岐</h1>
+<button id="clickButton">クリックしてください</button>
+<div class="message" id="message">ここにメッセージが表示されます。</div>
+<script>
+       // クリック回数を記録する変数
+       let clickCount = 0;
+       // ボタンとメッセージ領域を取得
+       const button = document.getElementById("clickButton");
+       const message = document.getElementById("message");
+       // ボタンクリック時の処理
+       button.addEventListener("click", () => {
+           clickCount++;
+           // クリック回数に応じて処理を分岐
+           if (clickCount === 1) {
+               message.textContent = "1回目のクリックです！";
+           } else if (clickCount === 2) {
+               message.textContent = "2回目のクリックです！";
+           } else if (clickCount === 3) {
+               message.textContent = "3回目のクリックです！";
+           } else {
+               message.textContent = `クリック回数: ${clickCount}回 - これ以上は特別な処理がありません！`;
+           }
+       });
+</script>
+</body>
+</html>
+has context menu
